@@ -1,5 +1,0 @@
-cargo:warning=shaderc: searching native shaderc libraries in '/Users/mariusdanciu/VulkanSDK/1.4.309.0/macOS/lib'
-cargo:warning=shaderc: macOS static build is experimental
-cargo:rustc-link-search=native=/Users/mariusdanciu/VulkanSDK/1.4.309.0/macOS/lib
-cargo:rustc-link-lib=dylib=shaderc_shared
-cargo:rustc-link-lib=dylib=c++
