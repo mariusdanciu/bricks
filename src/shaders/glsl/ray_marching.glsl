@@ -135,9 +135,9 @@ vec3 run(vec2 coord, vec2 screen, Camera camera) {
     Ray ray = Ray(camera.position, normalize(p.x * camera.uu + p.y * camera.vv + 1.5 * camera.ww));
     DirectionalLight d_light = DirectionalLight(normalize(vec3(-3., -1.5, -2.)), vec3(1., 0.85, 0.70), 1.0);
 
-    vec3 sky = clamp(vec3(0.5, 0.8, 1.) - (0.7 * ray.direction.y), 0.0, 1.0);
+    vec3 sky = vec3(0); //clamp(vec3(0.5, 0.8, 1.) - (0.7 * ray.direction.y), 0.0, 1.0);
 
-    sky = mix(sky, vec3(0.5, 0.7, 0.9), exp(-10.0 * max(ray.direction.y, 0.0)));
+    //sky = mix(sky, vec3(0.5, 0.7, 0.9), exp(-10.0 * max(ray.direction.y, 0.0)));
 
     vec3 res = sky;
 
