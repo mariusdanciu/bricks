@@ -30,12 +30,19 @@ Hit sdf(vec3 p, float dist) {
 
     col *= r * 4.1 + 0.1;
     float d1 = box_sdf(pRep, vec3(0.3 - r * 0.3, 0.1 - r * 0.4, 0.2), 0.02);
+    float d2 = box_sdf(op + vec3(0., 0, -0.05), vec3(1.78, 0.55, 0.13), 0.0);
 
-    //float d1 = sphere_sdf(p - vec3(-0.5, 2.0, 5.5), 0.3);
+    bool isMortar = (d2 < d1);  
 
     float cell = id_x + id_y * 5.0;
     d1 += 0.02 * fbm_3d(pRep / 0.1, cell * 0.5);
+    d2 += 0.03 * fbm_3d(op / 0.08, 0.0);
 
-    float d = max(dBox, d1);
+    float d3 = min(d2, d1);
+    if (isMortar) {
+        col = vec3(0.5, 0.5, 0.5);
+    }
+
+    float d = max(dBox, d3);
     return Hit(d, material, col, true);
 }
