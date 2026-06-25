@@ -1,3 +1,3 @@
 # Bricks with FBM and domain repetition
 
-<img width="791" height="561" alt="image" src="https://github.com/user-attachments/assets/07c675e9-dc9f-4e89-9763-d52f515d6da3" />
+<img width="794" height="583" alt="image" src="https://github.com/user-attachments/assets/66dc5354-5e89-4fa2-8f5e-6b42f7b1938f" />
